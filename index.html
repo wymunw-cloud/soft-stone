@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wall Soft Stone · Soft Stone Sdn Bhd</title>
+<meta name="description" content="Wall Soft Stone by Soft Stone Sdn Bhd: flexible MCM stone finish, 2–8 mm thin, Class A fire rated. 29 textures and 168 colours across travertine, rock, woven, geometric, artisan, wood grain and classical series.">
+<link rel="icon" href="images/soft-stone-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --ink: #1b2731;
+    --ink-2: #2b3a46;
+    --text: #2a2a28;
+    --muted: #6f6b64;
+    --gold: #b0814a;
+    --gold-soft: #d9bf98;
+    --bg: #f4f0e9;
+    --paper: #fbf9f5;
+    --line: #e2dbcf;
+    --line-strong: #cfc5b5;
+    --radius: 14px;
+    --shadow: 0 18px 40px -24px rgba(27, 39, 49, .35);
+    --serif: "Cormorant Garamond", "Times New Roman", serif;
+    --sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --wrap: 1200px;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 400 16px/1.65 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+  .eyebrow { font: 600 12px/1.4 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin: 0 0 14px; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: var(--ink); margin: 0; letter-spacing: -.01em; }
+  h2 { font-size: clamp(34px, 4.4vw, 52px); line-height: 1.05; }
+  .lead { font-size: 18px; color: var(--muted); max-width: 620px; }
+  .zh { font-family: "Noto Serif SC", "Songti SC", "SimSun", serif; color: var(--muted); font-weight: 400; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 999px; border: 1px solid var(--ink); background: var(--ink); color: #fff; font-weight: 600; font-size: 15px; text-decoration: none; transition: transform .2s, background .2s, color .2s; }
+  .btn:hover { transform: translateY(-1px); background: var(--ink-2); }
+  .btn.ghost { background: transparent; color: var(--ink); }
+  .btn.ghost:hover { background: var(--ink); color: #fff; }
+  .btn.gold { background: var(--gold); border-color: var(--gold); }
+  .btn.gold:hover { background: #9a6f3d; }
+  section { padding: 104px 0; }
+  .section-head { display: flex; justify-content: space-between; align-items: end; gap: 32px; flex-wrap: wrap; margin-bottom: 44px; }
+
+  /* ---------- nav ---------- */
+  .nav { position: sticky; top: 0; z-index: 50; background: rgba(244, 240, 233, .86); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid transparent; transition: border-color .3s; }
+  .nav.scrolled { border-bottom-color: var(--line); }
+  .nav .wrap { display: flex; align-items: center; gap: 28px; height: 68px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .brand img { width: 38px; height: 38px; border-radius: 10px; }
+  .brand b { font: 600 15px/1 var(--sans); letter-spacing: .32em; color: var(--ink); }
+  .brand small { display: block; font-size: 11px; letter-spacing: .08em; color: var(--muted); margin-top: 4px; }
+  .nav-links { display: flex; gap: 26px; margin-left: auto; }
+  .nav-links a { text-decoration: none; font-size: 14px; font-weight: 500; color: var(--ink); opacity: .78; }
+  .nav-links a:hover { opacity: 1; }
+  .sample-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--ink); background: var(--ink); color: #fff; font-size: 14px; font-weight: 600; }
+  .sample-btn .count { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 99px; background: var(--gold); display: inline-grid; place-items: center; font-size: 12px; }
+  .sample-btn.bump { animation: bump .4s; }
+  @keyframes bump { 40% { transform: scale(1.08); } }
+  .menu-btn { display: none; background: none; border: 0; padding: 8px; }
+
+  /* ---------- hero ---------- */
+  .hero { padding: 56px 0 96px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px; align-items: center; }
+  .hero h1 { font-size: clamp(48px, 6.6vw, 92px); line-height: .98; letter-spacing: -.02em; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero .lead { margin: 26px 0 34px; }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 56px; border-top: 1px solid var(--line); }
+  .stat { padding: 18px 16px 0 0; }
+  .stat b { display: block; font: 500 34px/1 var(--serif); color: var(--ink); }
+  .stat span { font-size: 13px; color: var(--muted); }
+  .hero-media { position: relative; }
+  .hero-media .main { border-radius: 22px; overflow: hidden; aspect-ratio: 4 / 5; box-shadow: var(--shadow); }
+  .hero-media .main img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-card { position: absolute; left: -48px; bottom: 36px; width: 190px; background: var(--paper); padding: 10px; border-radius: 16px; box-shadow: var(--shadow); }
+  .hero-card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 10px; }
+  .hero-card p { margin: 8px 4px 2px; font-size: 12px; line-height: 1.4; color: var(--muted); }
+  .hero-card p b { color: var(--ink); display: block; font-size: 13px; }
+
+  /* ---------- series band ---------- */
+  .series-band { padding: 0 0 24px; }
+  .series-row { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
+  .series-tile { position: relative; border: 0; padding: 0; border-radius: 12px; overflow: hidden; aspect-ratio: 3 / 4; background: var(--ink); text-align: left; }
+  .series-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; opacity: .9; }
+  .series-tile:hover img { transform: scale(1.06); }
+  .series-tile span { position: absolute; inset: auto 0 0 0; padding: 40px 14px 14px; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.62)); font: 500 21px/1.1 var(--serif); }
+  .series-tile small { display: block; font: 500 11px/1.6 var(--sans); letter-spacing: .12em; text-transform: uppercase; opacity: .8; }
+
+  /* ---------- about ---------- */
+  .about { background: var(--paper); }
+  .about .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 72px; align-items: center; }
+  .about-media { position: relative; }
+  .about-media img { border-radius: 18px; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+  .about-media .touch { position: absolute; right: -28px; top: 32px; width: 46%; border: 6px solid var(--paper); border-radius: 18px; aspect-ratio: 1.6; object-fit: cover; box-shadow: var(--shadow); }
+  .about p { color: var(--muted); }
+  .steps { list-style: none; padding: 0; margin: 34px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--line); }
+  .steps li { padding: 20px 20px 20px 0; border-bottom: 1px solid var(--line); }
+  .steps li:nth-child(odd) { border-right: 1px solid var(--line); }
+  .steps li:nth-child(even) { padding-left: 20px; }
+  .steps b { display: block; font: 500 13px/1 var(--sans); color: var(--gold); letter-spacing: .1em; margin-bottom: 8px; }
+  .steps strong { display: block; color: var(--ink); font-weight: 600; margin-bottom: 4px; }
+  .steps span { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+  /* ---------- advantages ---------- */
+  .adv { background: var(--ink); color: #e9e4dc; position: relative; overflow: hidden; }
+  .adv h2 { color: #fff; }
+  .adv .lead { color: #b9b4ab; }
+  .adv-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius); overflow: hidden; }
+  .adv-item { background: var(--ink); padding: 28px 24px 30px; }
+  .adv-item svg { width: 30px; height: 30px; stroke: var(--gold-soft); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 18px; }
+  .adv-item h3 { font: 600 16px/1.3 var(--sans); color: #fff; margin-bottom: 6px; letter-spacing: 0; }
+  .adv-item p { margin: 0; font-size: 14px; color: #a9a49b; line-height: 1.55; }
+  .macro-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 48px; }
+  .macro-row figure { margin: 0; position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 16 / 9; }
+  .macro-row img { width: 100%; height: 100%; object-fit: cover; }
+  .macro-row figcaption { position: absolute; left: 16px; bottom: 12px; font: 500 26px/1 var(--serif); color: #fff; text-shadow: 0 2px 14px rgba(0,0,0,.45); }
+
+  /* ---------- collection ---------- */
+  .toolbar { display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 28px; position: sticky; top: 68px; z-index: 20; background: var(--bg); padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { border: 1px solid var(--line-strong); background: transparent; padding: 8px 15px; border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--ink); transition: all .2s; white-space: nowrap; }
+  .chip:hover { border-color: var(--ink); }
+  .chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .chip .n { opacity: .55; margin-left: 4px; font-size: 12px; }
+  .search { position: relative; }
+  .search input { width: 260px; padding: 10px 14px 10px 38px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--paper); font: inherit; font-size: 14px; color: var(--text); }
+  .search svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; stroke: var(--muted); fill: none; stroke-width: 2; }
+  .series-intro { display: none; grid-template-columns: 280px 1fr; gap: 28px; align-items: center; margin-bottom: 32px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .series-intro.show { display: grid; }
+  .series-intro img { width: 100%; height: 150px; object-fit: cover; }
+  .series-intro h3 { font-size: 32px; }
+  .series-intro p { margin: 4px 24px 0 0; color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 28px 22px; }
+  .tex-card { display: block; width: 100%; text-align: left; background: none; border: 0; padding: 0; }
+  .tex-media { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; background: #e8e1d6; }
+  .tex-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .5s, transform .8s; }
+  .tex-media img.alt { opacity: 0; }
+  .tex-card:hover .tex-media img.alt, .tex-card:focus-visible .tex-media img.alt { opacity: 1; }
+  .tex-card:hover .tex-media img { transform: scale(1.03); }
+  .tex-badge { position: absolute; left: 12px; top: 12px; background: rgba(251,249,245,.92); color: var(--ink); font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 99px; }
+  .tex-body { padding: 14px 2px 0; }
+  .tex-series { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  .tex-card h3 { font-size: 27px; line-height: 1.15; margin: 2px 0 10px; }
+  .tex-card h3 .zh { font-size: 17px; margin-left: 6px; }
+  .mini { display: flex; gap: 4px; align-items: center; }
+  .mini img { width: 22px; height: 30px; object-fit: cover; border-radius: 4px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.06); }
+  .mini span { font-size: 13px; color: var(--muted); margin-left: 6px; }
+  .empty { display: none; padding: 60px 0; text-align: center; color: var(--muted); }
+
+  /* ---------- applications ---------- */
+  .apps { background: var(--paper); }
+  .apps-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; grid-template-rows: 300px 300px; gap: 14px; }
+  .app { position: relative; border-radius: var(--radius); overflow: hidden; margin: 0; }
+  .app:first-child { grid-row: span 2; }
+  .app:last-child { grid-column: span 2; }
+  .app img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s; }
+  .app:hover img { transform: scale(1.04); }
+  .app figcaption { position: absolute; inset: auto 0 0 0; padding: 60px 22px 20px; color: #fff; background: linear-gradient(transparent, rgba(10,15,20,.72)); }
+  .app h3 { color: #fff; font-size: 30px; }
+  .app p { margin: 4px 0 0; font-size: 14px; color: rgba(255,255,255,.82); max-width: 380px; }
+
+  /* ---------- real photos ---------- */
+  .real-chips { margin-bottom: 26px; }
+  .real-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 14px; }
+  .real-item { border: 0; padding: 0; background: none; text-align: left; }
+  .real-item .ph { border-radius: 10px; overflow: hidden; aspect-ratio: 9 / 20; background: #e8e1d6; }
+  .real-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+  .real-item:hover img { transform: scale(1.05); }
+  .real-item b { display: block; font-size: 12px; font-weight: 600; color: var(--ink); margin-top: 7px; font-family: ui-monospace, Consolas, monospace; }
+  .real-item span { display: block; font-size: 12px; color: var(--muted); line-height: 1.3; }
+  .real-more { margin-top: 28px; text-align: center; }
+
+  /* ---------- specs ---------- */
+  .specs .wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: start; }
+  .spec-list { margin: 30px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+  .spec-list li { display: flex; justify-content: space-between; gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .spec-list li span:first-child { color: var(--muted); }
+  .spec-list li span:last-child { color: var(--ink); font-weight: 600; text-align: right; }
+  .table-wrap { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: auto; max-height: 640px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  td:nth-child(2) { white-space: normal; min-width: 150px; }
+  td:nth-child(2) .zh { display: block; font-size: 13px; }
+  th { position: sticky; top: 0; background: var(--paper); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; z-index: 1; }
+  td.series-cell { color: var(--gold); font-weight: 600; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+  td code { font-size: 13px; }
+  tbody tr { cursor: pointer; }
+  tbody tr:hover td { background: #f3eee5; }
+
+  /* ---------- CTA + footer ---------- */
+  .cta { padding: 0 0 104px; }
+  .cta-box { position: relative; border-radius: 26px; overflow: hidden; color: #fff; padding: 80px 64px; background: var(--ink); }
+  .cta-box > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .38; }
+  .cta-box > div { position: relative; max-width: 620px; }
+  .cta-box h2 { color: #fff; }
+  .cta-box p { color: rgba(255,255,255,.82); font-size: 17px; margin: 18px 0 30px; }
+  .cta-box .btn.ghost { color: #fff; border-color: rgba(255,255,255,.7); }
+  .cta-box .btn.ghost:hover { background: #fff; color: var(--ink); }
+  footer { border-top: 1px solid var(--line); padding: 36px 0 48px; font-size: 13px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  footer p { margin: 0; max-width: 640px; }
+
+  /* ---------- dialogs ---------- */
+  dialog { border: 0; padding: 0; background: var(--paper); color: var(--text); border-radius: 20px; box-shadow: 0 40px 90px -30px rgba(0,0,0,.5); max-height: calc(100vh - 48px); }
+  dialog::backdrop { background: rgba(18, 24, 30, .62); backdrop-filter: blur(3px); }
+  .x { position: absolute; right: 14px; top: 14px; z-index: 3; width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(251,249,245,.94); display: grid; place-items: center; box-shadow: 0 2px 10px rgba(0,0,0,.12); }
+  .x svg { width: 18px; height: 18px; stroke: var(--ink); stroke-width: 2; fill: none; }
+  #texDialog { width: min(1180px, calc(100vw - 48px)); overflow: hidden; }
+  .td { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); grid-template-rows: minmax(0, 1fr); height: min(820px, calc(100vh - 48px)); }
+  .td-media { position: relative; background: #e8e1d6; min-height: 0; }
+  .td-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .td-media img.contain { object-fit: contain; background: #efe9df; padding: 28px; }
+  .td-tabs { position: absolute; left: 16px; bottom: 16px; display: flex; gap: 6px; background: rgba(251,249,245,.92); padding: 4px; border-radius: 99px; }
+  .td-tabs button { border: 0; background: transparent; padding: 7px 14px; border-radius: 99px; font-size: 13px; font-weight: 600; color: var(--ink); }
+  .td-tabs button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+  .td-caption { position: absolute; left: 16px; top: 16px; background: rgba(251,249,245,.92); border-radius: 10px; padding: 8px 12px; font-size: 13px; display: none; }
+  .td-caption.show { display: block; }
+  .td-info { padding: 40px 40px 32px; overflow-y: auto; }
+  .td-info h2 { font-size: 46px; }
+  .td-info h2 .zh { font-size: 24px; margin-left: 8px; }
+  .td-meta { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0 26px; }
+  .pill { font-size: 13px; padding: 6px 12px; border-radius: 99px; background: #efe8dc; color: var(--ink); }
+  .pill b { font-weight: 600; }
+  .sw-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+  .sw-head h3 { font: 600 13px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .sw-head span { font-size: 13px; color: var(--muted); }
+  .sw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 16px 12px; }
+  .sw { margin: 0; }
+  .sw-img { position: relative; border: 0; padding: 0; width: 100%; aspect-ratio: 1 / 1.45; border-radius: 10px; overflow: hidden; background: #e8e1d6; display: block; }
+  .sw-img img { width: 100%; height: 100%; object-fit: cover; }
+  .sw-img.active { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--gold); }
+  .sw figcaption { padding: 7px 1px 0; line-height: 1.35; }
+  .sw figcaption b { display: block; font-size: 13px; font-weight: 600; color: var(--ink); }
+  .sw figcaption .zh { font-size: 12px; }
+  .sw figcaption code { display: block; font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+  .sw figcaption code.tbc { font-style: italic; font-family: var(--sans); }
+  .add { margin-top: 7px; width: 100%; border: 1px solid var(--line-strong); background: transparent; border-radius: 99px; padding: 5px 8px; font-size: 12px; font-weight: 600; color: var(--ink); }
+  .add:hover { border-color: var(--ink); }
+  .add[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .td-real { margin-top: 30px; }
+  .td-real .row { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px; }
+  .td-real button { flex: 0 0 76px; border: 0; padding: 0; background: none; text-align: left; }
+  .td-real img { width: 76px; height: 150px; object-fit: cover; border-radius: 8px; }
+  .td-real code { font-size: 11px; color: var(--muted); }
+  .note { font-size: 12px; color: var(--muted); margin-top: 24px; }
+
+  #lightbox { width: min(1040px, calc(100vw - 48px)); overflow: hidden; }
+  .lb { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); height: min(760px, calc(100vh - 48px)); }
+  .lb-main { position: relative; background: #ebe5db; min-height: 0; }
+  .lb-main img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+  .lb-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(251,249,245,.94); display: grid; place-items: center; box-shadow: 0 2px 10px rgba(0,0,0,.12); }
+  .lb-nav svg { width: 18px; height: 18px; stroke: var(--ink); stroke-width: 2; fill: none; }
+  .lb-prev { left: 14px; } .lb-next { right: 14px; }
+  .lb-side { padding: 40px 32px 32px; overflow-y: auto; }
+  .lb-side h3 { font-size: 36px; }
+  .lb-side code { display: inline-block; margin: 8px 0 18px; font-size: 15px; color: var(--ink); background: #efe8dc; padding: 4px 10px; border-radius: 8px; }
+  .lb-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0 22px; }
+  .lb-thumbs button { border: 0; padding: 0; border-radius: 8px; overflow: hidden; aspect-ratio: 3 / 4; background: #e8e1d6; }
+  .lb-thumbs button[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--gold); }
+  .lb-thumbs img { width: 100%; height: 100%; object-fit: cover; }
+  .lb-side p { font-size: 14px; color: var(--muted); }
+
+  /* ---------- sample drawer ---------- */
+  .drawer { position: fixed; inset: 0 0 0 auto; width: min(440px, 100vw); background: var(--paper); z-index: 80; transform: translateX(100%); transition: transform .35s cubic-bezier(.2,.7,.2,1); display: flex; flex-direction: column; box-shadow: -30px 0 60px -30px rgba(0,0,0,.35); }
+  .drawer.open { transform: none; }
+  .scrim { position: fixed; inset: 0; background: rgba(18,24,30,.45); z-index: 79; opacity: 0; pointer-events: none; transition: opacity .3s; }
+  .scrim.open { opacity: 1; pointer-events: auto; }
+  .drawer header { padding: 26px 26px 16px; border-bottom: 1px solid var(--line); position: relative; }
+  .drawer header h2 { font-size: 34px; }
+  .drawer header p { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
+  .drawer .x { top: 22px; }
+  .s-list { flex: 1; overflow-y: auto; padding: 8px 26px; }
+  .s-item { display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .s-item img { width: 46px; height: 62px; object-fit: cover; border-radius: 6px; }
+  .s-item b { display: block; font-size: 14px; color: var(--ink); }
+  .s-item span { font-size: 12.5px; color: var(--muted); }
+  .s-item button { border: 0; background: none; color: var(--muted); font-size: 13px; text-decoration: underline; }
+  .s-empty { padding: 40px 0; text-align: center; color: var(--muted); font-size: 14px; }
+  .drawer footer { border-top: 1px solid var(--line); padding: 18px 26px 24px; display: grid; gap: 10px; }
+  .drawer textarea { width: 100%; min-height: 70px; resize: vertical; border: 1px solid var(--line-strong); border-radius: 10px; padding: 10px 12px; font: inherit; font-size: 14px; background: #fff; }
+  .drawer .btn { justify-content: center; }
+  .toast { position: fixed; left: 50%; bottom: 28px; transform: translate(-50%, 20px); background: var(--ink); color: #fff; padding: 11px 18px; border-radius: 99px; font-size: 14px; opacity: 0; pointer-events: none; transition: all .3s; z-index: 100; }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    * { transition-duration: .01ms !important; animation: none !important; }
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 1080px) {
+    .series-row { grid-template-columns: repeat(7, 160px); overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x mandatory; }
+    .series-tile { scroll-snap-align: start; }
+    .adv-grid { grid-template-columns: repeat(2, 1fr); }
+    .specs .wrap { grid-template-columns: 1fr; gap: 36px; }
+  }
+  @media (max-width: 900px) {
+    section { padding: 76px 0; }
+    .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--paper); border-bottom: 1px solid var(--line); padding: 8px 24px 16px; }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .menu-btn { display: inline-grid; margin-left: auto; }
+    .menu-btn svg { width: 24px; height: 24px; stroke: var(--ink); stroke-width: 2; fill: none; }
+    .hero { padding-top: 28px; }
+    .hero .wrap, .about .wrap { grid-template-columns: 1fr; gap: 44px; }
+    .hero-card { left: 12px; bottom: 12px; width: 140px; }
+    .about-media .touch { right: 12px; }
+    .apps-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 260px 220px 220px; }
+    .app:first-child { grid-row: auto; grid-column: span 2; }
+    .app:last-child { grid-column: span 2; }
+    .series-intro { grid-template-columns: 1fr; gap: 0; }
+    .series-intro div { padding: 18px 20px 22px; }
+    .series-intro p { margin-right: 0; }
+    #texDialog, #lightbox { width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh; border-radius: 0; margin: 0; }
+    .td, .lb { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; height: 100%; overflow-y: auto; }
+    .td-media { min-height: 54vh; }
+    .lb-main { min-height: 60vh; }
+    .td-info { padding: 28px 20px 40px; overflow: visible; }
+    .lb-side { padding: 24px 20px 36px; overflow: visible; }
+    .cta-box { padding: 56px 28px; }
+  }
+  @media (max-width: 560px) {
+    .wrap { padding: 0 16px; }
+    .brand small { display: none; }
+    .sample-btn .label { display: none; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: 1fr; }
+    .steps li:nth-child(odd) { border-right: 0; }
+    .steps li:nth-child(even) { padding-left: 0; }
+    .adv-grid { grid-template-columns: 1fr; }
+    .macro-row { grid-template-columns: 1fr; }
+    .toolbar { position: static; }
+    .search, .search input { width: 100%; }
+    .chips.scroll { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 0 16px 4px; width: calc(100% + 32px); }
+    .grid { grid-template-columns: 1fr 1fr; gap: 22px 12px; }
+    .tex-card h3 { font-size: 21px; }
+    .tex-card h3 .zh { display: block; margin: 0; font-size: 14px; }
+    .mini img:nth-child(n+5) { display: none; }
+    .apps-grid { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-rows: 240px; }
+    .app:first-child, .app:last-child { grid-column: auto; }
+    .real-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .td-info h2 { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Soft Stone Sdn Bhd home">
+      <img src="images/soft-stone-mark.svg" alt="">
+      <div><b>SOFT STONE</b><small>Sdn Bhd</small></div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#collection">Collection</a>
+      <a href="#about">What is soft stone</a>
+      <a href="#applications">Applications</a>
+      <a href="#real">Real photos</a>
+      <a href="#specs">Specifications</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <button class="sample-btn" id="sampleBtn" aria-label="Open sample list"><span class="label">Sample list</span><span class="count" id="sampleCount">0</span></button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">MCM flexible stone · 2026 collection</p>
+      <h1>Stone walls, <em>soft enough to bend.</em></h1>
+      <p class="lead">Wall Soft Stone is a flexible stone finish only a few millimetres thick. It wraps around curves and columns, goes up quickly, and is rated Class A for fire. Choose from <b id="heroTex">29</b> textures and <b id="heroCol">168</b> colours.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#collection">Explore the collection</a>
+        <a class="btn ghost" href="#real">See real sheets</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="statTex">29</b><span>textures</span></div>
+        <div class="stat"><b id="statCol">168</b><span>colours</span></div>
+        <div class="stat"><b>2–8<small style="font-size:18px"> mm</small></b><span>thin &amp; flexible</span></div>
+        <div class="stat"><b>A</b><span>class fire rating</span></div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="main"><img id="heroImg" alt="Travertine soft stone feature wall with ceramic vases" fetchpriority="high"></div>
+      <div class="hero-card">
+        <img id="heroBend" alt="A real sheet of soft stone flexing as it hangs">
+        <p><b>Real sheet, real flex</b>A full sheet curving under its own weight.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="series-band">
+  <div class="wrap">
+    <div class="series-row" id="seriesRow"></div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-media reveal">
+      <img id="aboutImg" alt="Travertine soft stone wall behind a rattan lounge chair" loading="lazy">
+      <img class="touch" id="touchImg" alt="A hand resting on a soft stone wall" loading="lazy">
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">What is soft stone</p>
+      <h2>The texture of stone, made from natural clay.</h2>
+      <p class="lead" style="margin-top:20px">Soft stone (MCM, modified clay material) is made from natural clay and recycled inorganic solids instead of quarried rock. It faithfully reproduces the look and feel of travertine, marble, slate, timber and woven fibre, in sheets that are ultra-thin, lightweight and flexible.</p>
+      <ol class="steps">
+        <li><b>01</b><strong>Natural raw materials</strong><span>Natural clay and inorganic solid waste are collected and sorted.</span></li>
+        <li><b>02</b><strong>Fine grinding</strong><span>The materials are milled into a fine, even powder.</span></li>
+        <li><b>03</b><strong>Modification</strong><span>A surface treatment links the particles into a layered, interwoven network that makes the material plastic.</span></li>
+        <li><b>04</b><strong>Flexible stone sheet</strong><span>The modified clay is formed into thin sheets that recreate natural stone textures.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="adv" id="advantages">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">8 core advantages</p>
+        <h2>Soft. Natural. Built to last.</h2>
+      </div>
+      <p class="lead">Everything you love about a stone wall, without the weight, the quarrying or the long installation.</p>
+    </div>
+    <div class="adv-grid reveal" id="advGrid"></div>
+    <div class="macro-row reveal">
+      <figure><img id="m1" alt="Close-up of travertine texture" loading="lazy"><figcaption>Soft</figcaption></figure>
+      <figure><img id="m2" alt="Close-up of fine sand ripples" loading="lazy"><figcaption>Natural</figcaption></figure>
+      <figure><img id="m3" alt="Close-up of dark layered rock" loading="lazy"><figcaption>Eco-friendly</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="collection">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">The collection</p>
+        <h2>Seven series. <span id="colTexCount">29</span> textures.</h2>
+      </div>
+      <p class="lead">Hover a texture to see it up close, then open it for every colour and code. Add the ones you like to your sample list.</p>
+    </div>
+    <div class="toolbar">
+      <div class="chips scroll" id="seriesChips" role="group" aria-label="Filter by series"></div>
+      <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="search" type="search" placeholder="Search texture, colour or code" aria-label="Search textures"></label>
+    </div>
+    <div class="series-intro" id="seriesIntro"></div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty">No textures match that search.</p>
+  </div>
+</section>
+
+<section class="apps" id="applications">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Applications</p>
+        <h2>Inside, outside, and around the curve.</h2>
+      </div>
+      <p class="lead">For homes and commercial projects, on interior walls and exterior facades.</p>
+    </div>
+    <div class="apps-grid reveal" id="appsGrid"></div>
+  </div>
+</section>
+
+<section id="real">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Real photos</p>
+        <h2>Real sheets, photographed in the warehouse.</h2>
+      </div>
+      <p class="lead">No renders: actual production sheets, shown flat, flexing and up close. Tap a sheet to see how it bends.</p>
+    </div>
+    <div class="chips real-chips scroll" id="realChips" role="group" aria-label="Filter real photos"></div>
+    <div class="real-grid" id="realGrid"></div>
+    <div class="real-more"><button class="btn ghost" id="realMore">Show all photos</button></div>
+  </div>
+</section>
+
+<section class="specs" id="specs" style="background:var(--paper)">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Specifications</p>
+      <h2>The technical details.</h2>
+      <ul class="spec-list">
+        <li><span>Material</span><span>MCM modified clay</span></li>
+        <li><span>Standard sizes</span><span>600 × 1200 mm<br>1200 × 3000 mm</span></li>
+        <li><span>Thickness</span><span>2–8 mm, by texture</span></li>
+        <li><span>Fire rating</span><span>Class A</span></li>
+        <li><span>Use</span><span>Interior &amp; exterior walls</span></li>
+        <li><span>Performance</span><span>Water, weather, UV &amp;<br>freeze-thaw resistant</span></li>
+      </ul>
+      <p class="note">Product photos, layouts and room images are for reference only. Actual colour and texture can vary between batches; please confirm with a physical sample before ordering.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table>
+        <thead><tr><th>Series</th><th>Texture</th><th>Code</th><th>Thickness</th><th>Colours</th></tr></thead>
+        <tbody id="specBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="cta" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="cta-box">
+      <img id="ctaImg" alt="" loading="lazy">
+      <div>
+        <p class="eyebrow" style="color:var(--gold-soft)">Samples &amp; quotation</p>
+        <h2>See it, touch it, then decide.</h2>
+        <p>Add colours to your sample list as you browse and send it to us. We'll help you compare finishes and prepare a quotation for your space.</p>
+        <div class="hero-ctas">
+          <button class="btn gold" id="ctaSamples">Open my sample list</button>
+          <a class="btn ghost" id="ctaSite" target="_blank" rel="noopener" hidden>Visit our website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b style="color:var(--ink)">Soft Stone Sdn Bhd</b> · Wall Soft Stone (MCM flexible stone) collection 2026.</p>
+    <p>Images are for reference only; actual colour may vary from screen to screen and batch to batch.</p>
+  </div>
+</footer>
+
+<!-- texture detail -->
+<dialog id="texDialog" aria-label="Texture details">
+  <button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="td">
+    <div class="td-media">
+      <img id="tdImg" alt="">
+      <div class="td-caption" id="tdCaption"></div>
+      <div class="td-tabs" role="group" aria-label="Image view">
+        <button data-view="scene" aria-pressed="true">In a room</button>
+        <button data-view="texture" aria-pressed="false">Close-up</button>
+      </div>
+    </div>
+    <div class="td-info" id="tdInfo"></div>
+  </div>
+</dialog>
+
+<!-- real photo lightbox -->
+<dialog id="lightbox" aria-label="Real sheet photos">
+  <button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="lb">
+    <div class="lb-main">
+      <img id="lbImg" alt="">
+      <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous sheet"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="lb-nav lb-next" id="lbNext" aria-label="Next sheet"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <div class="lb-side" id="lbSide"></div>
+  </div>
+</dialog>
+
+<!-- sample list -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Sample list" aria-hidden="true">
+  <header>
+    <h2>Sample list</h2>
+    <p>Send this list to Soft Stone Sdn Bhd to request samples or a quotation.</p>
+    <button class="x" id="drawerClose" aria-label="Close sample list"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </header>
+  <div class="s-list" id="sList"></div>
+  <footer>
+    <textarea id="sNotes" placeholder="Notes: wall size, location, interior or exterior…"></textarea>
+    <a class="btn gold" id="sWhatsApp" target="_blank" rel="noopener" hidden>Send on WhatsApp</a>
+    <a class="btn" id="sEmail" hidden>Send by email</a>
+    <button class="btn ghost" id="sCopy">Copy list</button>
+  </footer>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/data.js"></script>
+<script>
+// Fill these in so the sample list can be sent straight to Soft Stone Sdn Bhd.
+// whatsapp: country code + number, digits only (e.g. "60123456789"); email: "sales@yourcompany.com.my"; website: "https://yourcompany.com.my"
+const CONTACT = { whatsapp: "", email: "", website: "" };
+
+const D = window.SOFT_STONE;
+const $ = (s, el = document) => el.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const seriesById = Object.fromEntries(D.series.map((s) => [s.id, s]));
+const texBySlug = Object.fromEntries(D.textures.map((t) => [t.slug, t]));
+const totalColours = D.textures.reduce((a, t) => a + t.swatches.length, 0);
+
+// ---------- static fills ----------
+["heroTex", "statTex", "colTexCount"].forEach((id) => ($("#" + id).textContent = D.textures.length));
+["heroCol", "statCol"].forEach((id) => ($("#" + id).textContent = totalColours));
+$("#heroImg").src = D.misc.hero;
+const bendSample = D.real.find((r) => r.code === "RJ-dls/10") || D.real[0];
+$("#heroBend").src = bendSample.bend;
+$("#aboutImg").src = D.misc.intro;
+$("#touchImg").src = D.misc.touch;
+$("#m1").src = D.misc.travertineMacro;
+$("#m2").src = D.misc.sandMacro;
+$("#m3").src = D.misc.rockMacro;
+$("#ctaImg").src = D.misc.lounge;
+if (CONTACT.website) { $("#ctaSite").href = CONTACT.website; $("#ctaSite").hidden = false; }
+
+// ---------- series tiles ----------
+$("#seriesRow").innerHTML = D.series.map((s) => `
+  <button class="series-tile" data-series="${s.id}">
+    <img src="${esc(s.cover)}" alt="" loading="lazy">
+    <span><small>${s.count} texture${s.count > 1 ? "s" : ""}</small>${esc(s.en)}</span>
+  </button>`).join("");
+$("#seriesRow").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-series]");
+  if (!b) return;
+  setSeries(b.dataset.series);
+  $("#collection").scrollIntoView();
+});
+
+// ---------- advantages ----------
+const ICONS = {
+  flex: '<path d="M3 19c5 0 7-14 18-14"/><path d="M3 15c4 0 6-10 14-10" opacity=".55"/>',
+  fire: '<path d="M12 3c1 3.2 5 5.4 5 10.2a5 5 0 0 1-10 0c0-2.6 1.5-4.2 2.6-5.2.3 1.8 1.1 2.7 2 3.1.2-3.1-.1-5.6-1.6-8.1z"/>',
+  water: '<path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/><path d="M9 14.5a3 3 0 0 0 3 3"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/>',
+  frost: '<path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10"/><path d="M9.5 3.5L12 5.5l2.5-2M9.5 20.5L12 18.5l2.5 2"/>',
+  static: '<path d="M13 2L5 13.5h6L10 22l8-11.5h-6z"/><path d="M3 3l18 18"/>',
+  install: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/>',
+  leaf: '<path d="M5 20c0-9.5 6-15 16-15 0 9.5-5.5 15-15 15z"/><path d="M5 20c3.5-4.5 7-7.5 11-9.5"/>',
+};
+const ADV = [
+  ["flex", "Thin, flexible & pliable", "2–8 mm sheets bend around columns, arches and curved walls."],
+  ["fire", "Class A fire rating", "Rated Class A for fire performance, indoors and out."],
+  ["water", "Water & moisture resistant", "Stands up to humidity and rain, at home in a tropical climate."],
+  ["sun", "Weather & sun resistant", "Made for exterior facades and walls in direct sun."],
+  ["frost", "Freeze-thaw resistant", "Stays stable through temperature swings without cracking."],
+  ["static", "Anti-static", "An anti-static surface that helps resist dust build-up."],
+  ["install", "Easy to install", "Light sheets go up quickly, with far less mess than stone or tile."],
+  ["leaf", "Low-carbon & eco-friendly", "Natural clay and recycled inorganic solids instead of quarried stone."],
+];
+$("#advGrid").innerHTML = ADV.map(([i, t, d]) => `<div class="adv-item"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[i]}</svg><h3>${t}</h3><p>${d}</p></div>`).join("");
+
+// ---------- applications ----------
+const APPS = [
+  [texBySlug["wood-grained"].scene, "Feature walls", "Living rooms, TV walls and bedheads: a full-height stone or timber look without heavy slabs."],
+  [D.misc.curve, "Curves & columns", "Flexible sheets wrap columns, arches and curved walls where rigid stone can't go."],
+  [texBySlug["granite"].scene, "Exterior facades", "Weather-, sun- and moisture-resistant for entrances and building fronts."],
+  [texBySlug["large-star-moon"].scene, "Commercial spaces", "Lobbies, showrooms, cafés and hotels: dramatic marble and rock looks, installed fast."],
+];
+$("#appsGrid").innerHTML = APPS.map(([img, h, p]) => `<figure class="app"><img src="${esc(img)}" alt="${esc(h)} finished in soft stone" loading="lazy"><figcaption><h3>${h}</h3><p>${p}</p></figcaption></figure>`).join("");
+
+// ---------- collection ----------
+let currentSeries = "all";
+const chipsEl = $("#seriesChips");
+chipsEl.innerHTML = [`<button class="chip" data-series="all" aria-pressed="true">All<span class="n">${D.textures.length}</span></button>`]
+  .concat(D.series.map((s) => `<button class="chip" data-series="${s.id}" aria-pressed="false">${esc(s.en)}<span class="n">${s.count}</span></button>`)).join("");
+chipsEl.addEventListener("click", (e) => { const b = e.target.closest("[data-series]"); if (b) setSeries(b.dataset.series); });
+$("#search").addEventListener("input", renderGrid);
+
+function setSeries(id) {
+  currentSeries = id;
+  chipsEl.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.series === id)));
+  const intro = $("#seriesIntro");
+  const s = seriesById[id];
+  if (s) {
+    intro.innerHTML = `<img src="${esc(s.cover)}" alt=""><div><h3>${esc(s.en)} series <span class="zh">${esc(s.zh)}</span></h3><p>${esc(s.blurb)}</p></div>`;
+    intro.classList.add("show");
+  } else intro.classList.remove("show");
+  renderGrid();
+}
+
+function matches(t, q) {
+  if (!q) return true;
+  const hay = [t.en, t.zh, t.prefix, seriesById[t.series].en, ...t.swatches.flatMap((s) => [s.en, s.zh, s.code])].join(" ").toLowerCase();
+  return q.split(/\s+/).every((w) => hay.includes(w));
+}
+
+function renderGrid() {
+  const q = $("#search").value.trim().toLowerCase();
+  const list = D.textures.filter((t) => (currentSeries === "all" || t.series === currentSeries) && matches(t, q));
+  $("#grid").innerHTML = list.map((t) => `
+    <button class="tex-card" data-slug="${t.slug}" aria-label="${esc(t.en)}: view ${t.swatches.length} colours">
+      <div class="tex-media">
+        <img src="${esc(t.scene)}" alt="" loading="lazy" decoding="async">
+        <img class="alt" src="${esc(t.texture)}" alt="" loading="lazy" decoding="async">
+        <span class="tex-badge">${esc(t.thk)}</span>
+      </div>
+      <div class="tex-body">
+        <div class="tex-series">${esc(seriesById[t.series].en)}</div>
+        <h3>${esc(t.en)}<span class="zh">${esc(t.zh)}</span></h3>
+        <div class="mini">${t.swatches.slice(0, 6).map((s) => `<img src="${esc(s.img)}" alt="" loading="lazy">`).join("")}<span>${t.swatches.length} colour${t.swatches.length > 1 ? "s" : ""}</span></div>
+      </div>
+    </button>`).join("");
+  $("#empty").style.display = list.length ? "none" : "block";
+}
+$("#grid").addEventListener("click", (e) => { const c = e.target.closest("[data-slug]"); if (c) openTexture(c.dataset.slug); });
+
+// ---------- texture dialog ----------
+const texDialog = $("#texDialog");
+let openTex = null;
+function openTexture(slug, swatchIndex) {
+  const t = texBySlug[slug];
+  openTex = t;
+  const s = seriesById[t.series];
+  const real = D.real.filter((r) => r.slug === slug);
+  $("#tdInfo").innerHTML = `
+    <p class="eyebrow">${esc(s.en)} series</p>
+    <h2>${esc(t.en)}<span class="zh">${esc(t.zh)}</span></h2>
+    <div class="td-meta">
+      <span class="pill">Thickness <b>${esc(t.thk)}</b></span>
+      <span class="pill">Sizes <b>600×1200 · 1200×3000 mm</b></span>
+      <span class="pill">Code <b>${esc(t.prefix)}</b></span>
+    </div>
+    <div class="sw-head"><h3>Colours</h3><span>${t.swatches.length} shown · more on request</span></div>
+    <div class="sw-grid">${t.swatches.map((w, i) => `
+      <figure class="sw">
+        <button class="sw-img" data-sw="${i}" aria-label="View ${esc(w.en)}"><img src="${esc(w.img)}" alt="${esc(w.en)} ${esc(t.en)} swatch" loading="lazy"></button>
+        <figcaption><b>${esc(w.en)}</b><span class="zh">${esc(w.zh)}</span>${w.code ? `<code>${esc(w.code)}</code>` : `<code class="tbc">Code on request</code>`}</figcaption>
+        <button class="add" data-add="${i}" aria-pressed="${samples.has(key(slug, i))}">${samples.has(key(slug, i)) ? "✓ In sample list" : "+ Sample"}</button>
+      </figure>`).join("")}
+    </div>
+    ${real.length ? `<div class="td-real"><div class="sw-head"><h3>Real sheet photos</h3><span>${real.length}</span></div><div class="row">${real.map((r) => `<button data-real="${D.real.indexOf(r)}"><img src="${esc(r.flat)}" alt="Real sheet ${esc(r.code)}" loading="lazy"><code>${esc(r.code)}</code></button>`).join("")}</div></div>` : ""}
+    <p class="note">Colours are for reference only. Actual colour may vary; please confirm with a physical sample.</p>`;
+  showView("scene");
+  if (!texDialog.open) texDialog.showModal();
+  $("#tdInfo").scrollTop = 0;
+  if (swatchIndex != null) showSwatch(swatchIndex);
+}
+function showView(v) {
+  const img = $("#tdImg");
+  img.classList.remove("contain");
+  img.src = v === "scene" ? openTex.scene : openTex.texture;
+  img.alt = `${openTex.en} soft stone ${v === "scene" ? "in a room" : "close-up"}`;
+  texDialog.querySelectorAll(".td-tabs button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === v)));
+  texDialog.querySelectorAll(".sw-img.active").forEach((b) => b.classList.remove("active"));
+  $("#tdCaption").classList.remove("show");
+}
+function showSwatch(i) {
+  const w = openTex.swatches[i];
+  const img = $("#tdImg");
+  img.src = w.img;
+  img.alt = `${w.en} swatch`;
+  img.classList.add("contain");
+  texDialog.querySelectorAll(".td-tabs button").forEach((b) => b.setAttribute("aria-pressed", "false"));
+  texDialog.querySelectorAll(".sw-img").forEach((b) => b.classList.toggle("active", b.dataset.sw == i));
+  const cap = $("#tdCaption");
+  cap.innerHTML = `<b>${esc(w.en)}</b> · ${esc(w.code || "code on request")}`;
+  cap.classList.add("show");
+  if (matchMedia("(max-width: 900px)").matches) texDialog.querySelector(".td").scrollTo({ top: 0, behavior: "smooth" });
+}
+texDialog.addEventListener("click", (e) => {
+  if (e.target === texDialog || e.target.closest("[data-close]")) return texDialog.close();
+  const tab = e.target.closest("[data-view]");
+  if (tab) return showView(tab.dataset.view);
+  const sw = e.target.closest("[data-sw]");
+  if (sw) return showSwatch(Number(sw.dataset.sw));
+  const add = e.target.closest("[data-add]");
+  if (add) {
+    const i = Number(add.dataset.add);
+    const on = toggleSample(openTex, i);
+    add.setAttribute("aria-pressed", String(on));
+    add.textContent = on ? "✓ In sample list" : "+ Sample";
+    return;
+  }
+  const r = e.target.closest("[data-real]");
+  if (r) { texDialog.close(); openLightbox(Number(r.dataset.real), D.real); }
+});
+
+// ---------- real photos ----------
+const realSlugs = [...new Set(D.real.map((r) => r.slug))];
+let realFilter = "all", realExpanded = false;
+const REAL_PREVIEW = 24;
+$("#realChips").innerHTML = [`<button class="chip" data-r="all" aria-pressed="true">All<span class="n">${D.real.length}</span></button>`]
+  .concat(realSlugs.map((s) => `<button class="chip" data-r="${s}" aria-pressed="false">${esc(texBySlug[s].en)}<span class="n">${D.real.filter((r) => r.slug === s).length}</span></button>`)).join("");
+$("#realChips").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-r]");
+  if (!b) return;
+  realFilter = b.dataset.r;
+  $("#realChips").querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", String(c === b)));
+  renderReal();
+});
+$("#realMore").addEventListener("click", () => { realExpanded = true; renderReal(); });
+function realList() { return D.real.filter((r) => realFilter === "all" || r.slug === realFilter); }
+function renderReal() {
+  const list = realList();
+  const shown = realExpanded || realFilter !== "all" ? list : list.slice(0, REAL_PREVIEW);
+  $("#realGrid").innerHTML = shown.map((r) => `
+    <button class="real-item" data-i="${D.real.indexOf(r)}">
+      <div class="ph"><img src="${esc(r.flat)}" alt="Real ${esc(texBySlug[r.slug].en)} sheet ${esc(r.code)}" loading="lazy" decoding="async"></div>
+      <b>${esc(r.code)}</b><span>${esc(texBySlug[r.slug].en)}</span>
+    </button>`).join("");
+  $("#realMore").parentElement.style.display = shown.length < list.length ? "" : "none";
+}
+$("#realGrid").addEventListener("click", (e) => { const b = e.target.closest("[data-i]"); if (b) openLightbox(Number(b.dataset.i), realList()); });
+
+const lightbox = $("#lightbox");
+let lbList = [], lbPos = 0, lbView = "bend";
+function openLightbox(realIndex, list) {
+  lbList = list.includes(D.real[realIndex]) ? list : D.real;
+  lbPos = lbList.indexOf(D.real[realIndex]);
+  lbView = "bend";
+  renderLightbox();
+  if (!lightbox.open) lightbox.showModal();
+}
+function renderLightbox() {
+  const r = lbList[lbPos];
+  const t = texBySlug[r.slug];
+  const views = [["bend", "Flexing"], ["flat", "Full sheet"], ["detail", "Detail"]].filter(([k]) => r[k]);
+  if (!r[lbView]) lbView = views[0][0];
+  $("#lbImg").src = r[lbView];
+  $("#lbImg").alt = `${t.en} ${r.code}: ${views.find((v) => v[0] === lbView)[1].toLowerCase()}`;
+  $("#lbSide").innerHTML = `
+    <p class="eyebrow">${esc(seriesById[t.series].en)} series · real photo</p>
+    <h3>${esc(t.en)} <span class="zh" style="font-size:20px">${esc(t.zh)}</span></h3>
+    <code>${esc(r.code)}</code>
+    <div class="lb-thumbs">${views.map(([k, label]) => `<button data-v="${k}" aria-pressed="${k === lbView}" aria-label="${label}"><img src="${esc(r[k])}" alt=""></button>`).join("")}</div>
+    <p>Production sheet photographed in the warehouse. Sheets are 1200 × 3000 mm or 600 × 1200 mm.</p>
+    <p style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn" data-open-tex="${r.slug}">See all ${esc(t.en)} colours</button>
+    </p>
+    <p style="font-size:12px">${lbPos + 1} of ${lbList.length} · use ← → to browse</p>`;
+}
+function lbStep(d) { lbPos = (lbPos + d + lbList.length) % lbList.length; renderLightbox(); }
+$("#lbPrev").addEventListener("click", () => lbStep(-1));
+$("#lbNext").addEventListener("click", () => lbStep(1));
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox || e.target.closest("[data-close]")) return lightbox.close();
+  const v = e.target.closest("[data-v]");
+  if (v) { lbView = v.dataset.v; renderLightbox(); return; }
+  const o = e.target.closest("[data-open-tex]");
+  if (o) { lightbox.close(); openTexture(o.dataset.openTex); }
+});
+lightbox.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") lbStep(-1);
+  if (e.key === "ArrowRight") lbStep(1);
+});
+
+// ---------- spec table ----------
+$("#specBody").innerHTML = D.textures.map((t) => `
+  <tr data-slug="${t.slug}" tabindex="0"><td class="series-cell">${esc(seriesById[t.series].en)}</td><td>${esc(t.en)} <span class="zh">${esc(t.zh)}</span></td><td><code>${esc(t.prefix)}</code></td><td>${esc(t.thk)}</td><td>${t.swatches.length}</td></tr>`).join("");
+$("#specBody").addEventListener("click", (e) => { const tr = e.target.closest("[data-slug]"); if (tr) openTexture(tr.dataset.slug); });
+$("#specBody").addEventListener("keydown", (e) => { if (e.key === "Enter") { const tr = e.target.closest("[data-slug]"); if (tr) openTexture(tr.dataset.slug); } });
+
+// ---------- sample list ----------
+const STORE = "softstone-samples";
+const key = (slug, i) => `${slug}|${i}`;
+const samples = new Map();
+try { (JSON.parse(localStorage.getItem(STORE)) || []).forEach((k) => { const [slug, i] = k.split("|"); if (texBySlug[slug]?.swatches[i]) samples.set(k, true); }); } catch (e) {}
+function save() { try { localStorage.setItem(STORE, JSON.stringify([...samples.keys()])); } catch (e) {} }
+function toggleSample(t, i) {
+  const k = key(t.slug, i);
+  const on = !samples.has(k);
+  on ? samples.set(k, true) : samples.delete(k);
+  save();
+  renderSamples();
+  const btn = $("#sampleBtn");
+  btn.classList.remove("bump"); void btn.offsetWidth; btn.classList.add("bump");
+  toast(on ? `Added ${t.swatches[i].en} ${t.en}` : "Removed from sample list");
+  return on;
+}
+function sampleItems() { return [...samples.keys()].map((k) => { const [slug, i] = k.split("|"); return { k, t: texBySlug[slug], w: texBySlug[slug].swatches[i] }; }); }
+function listText() {
+  const items = sampleItems();
+  const lines = items.map((x, n) => `${n + 1}. ${x.t.en} – ${x.w.en} (${x.w.zh})${x.w.code ? " · " + x.w.code : ""}`);
+  const notes = $("#sNotes").value.trim();
+  return `Hi Soft Stone Sdn Bhd, I'd like samples / a quotation for Wall Soft Stone:\n${lines.join("\n")}${notes ? "\n\nNotes: " + notes : ""}`;
+}
+function renderSamples() {
+  const items = sampleItems();
+  $("#sampleCount").textContent = items.length;
+  $("#sList").innerHTML = items.length ? items.map((x) => `
+    <div class="s-item"><img src="${esc(x.w.img)}" alt=""><div><b>${esc(x.w.en)}</b><span>${esc(x.t.en)} · ${esc(x.w.code || "code on request")}</span></div><button data-rm="${x.k}">Remove</button></div>`).join("")
+    : `<p class="s-empty">Your list is empty.<br>Open any texture and tap <b>+ Sample</b>.</p>`;
+  const has = items.length > 0;
+  const wa = $("#sWhatsApp"), em = $("#sEmail");
+  wa.hidden = !CONTACT.whatsapp; em.hidden = !CONTACT.email;
+  if (CONTACT.whatsapp) wa.href = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(listText())}`;
+  if (CONTACT.email) em.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent("Wall Soft Stone samples")}&body=${encodeURIComponent(listText())}`;
+  [wa, em, $("#sCopy")].forEach((b) => { b.style.opacity = has ? 1 : .45; b.style.pointerEvents = has ? "" : "none"; });
+}
+$("#sList").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-rm]");
+  if (!b) return;
+  samples.delete(b.dataset.rm); save(); renderSamples();
+  if (texDialog.open && openTex) openTexture(openTex.slug);
+});
+$("#sNotes").addEventListener("input", renderSamples);
+$("#sCopy").addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(listText()); toast("Sample list copied"); }
+  catch (e) { toast("Couldn't copy. Select the list and copy it manually."); }
+});
+const drawer = $("#drawer"), scrim = $("#scrim");
+function setDrawer(open) {
+  drawer.classList.toggle("open", open); scrim.classList.toggle("open", open);
+  drawer.setAttribute("aria-hidden", String(!open));
+  if (open) { if (texDialog.open) texDialog.close(); if (lightbox.open) lightbox.close(); $("#drawerClose").focus(); }
+}
+$("#sampleBtn").addEventListener("click", () => setDrawer(true));
+$("#ctaSamples").addEventListener("click", () => setDrawer(true));
+$("#drawerClose").addEventListener("click", () => setDrawer(false));
+scrim.addEventListener("click", () => setDrawer(false));
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && drawer.classList.contains("open")) setDrawer(false); });
+
+let toastTimer;
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("show"), 2200); }
+
+// ---------- nav + reveal ----------
+const nav = $("#nav");
+addEventListener("scroll", () => nav.classList.toggle("scrolled", scrollY > 10), { passive: true });
+$("#menuBtn").addEventListener("click", () => { const o = $("#navLinks").classList.toggle("open"); $("#menuBtn").setAttribute("aria-expanded", String(o)); });
+$("#navLinks").addEventListener("click", (e) => { if (e.target.closest("a")) $("#navLinks").classList.remove("open"); });
+const io = "IntersectionObserver" in window ? new IntersectionObserver((es) => es.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }), { rootMargin: "0px 0px -8% 0px" }) : null;
+document.querySelectorAll(".reveal").forEach((el) => (io ? io.observe(el) : el.classList.add("in")));
+
+renderGrid();
+renderReal();
+renderSamples();
+</script>
+</body>
+</html>
