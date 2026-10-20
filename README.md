@@ -10,7 +10,8 @@ Open `index.html` in a browser. It is a static page with no build step, so it ca
 
 - `index.html`: the page (layout, styles and scripts)
 - `assets/data.js`: series, textures, colour names, codes and thickness; edit names or codes here
-- `images/`: room photos, texture close-ups, colour swatches and real-sheet photos
+- `assets/install.js`: installation guide steps, rules and key figures (from the installation manual)
+- `images/`: room photos, texture close-ups, colour swatches, real-sheet photos and installation step photos (`images/install/`)
 
 ## Contact details
 

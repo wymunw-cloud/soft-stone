@@ -197,6 +197,51 @@
   tbody tr { cursor: pointer; }
   tbody tr:hover td { background: #f3eee5; }
 
+  /* ---------- installation guide ---------- */
+  .facts { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-bottom: 40px; }
+  .fact { background: var(--paper); padding: 20px 18px; }
+  .fact b { display: block; font: 500 30px/1.05 var(--serif); color: var(--ink); }
+  .fact span { display: block; margin-top: 6px; font-size: 13px; line-height: 1.45; color: var(--muted); }
+  .guide-tabs { margin-bottom: 36px; }
+  .guide-group { margin-bottom: 60px; }
+  .guide-group > header { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .guide-group h3 { font-size: 32px; }
+  .guide-group h3 .zh { font-size: 18px; margin-left: 8px; }
+  .guide-group .count { margin-left: auto; font-size: 13px; color: var(--muted); }
+  .guide-intro { color: var(--muted); max-width: 760px; margin: 0 0 22px; }
+  .steps-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 28px 18px; }
+  .step { margin: 0; }
+  .step-ph { position: relative; display: block; width: 100%; border: 0; padding: 0; border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 3; background: #e8e1d6; cursor: zoom-in; }
+  .step-ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+  .step-ph:hover img { transform: scale(1.04); }
+  .step-no { position: absolute; left: 10px; top: 10px; min-width: 32px; height: 28px; padding: 0 8px; border-radius: 99px; background: rgba(27, 39, 49, .86); color: #fff; font-size: 12.5px; font-weight: 700; display: grid; place-items: center; }
+  .step figcaption { padding-top: 12px; }
+  .step b, .mistake .txt b { display: block; color: var(--ink); font-weight: 600; font-size: 15.5px; line-height: 1.35; }
+  .step b .zh, .mistake .txt b .zh { font-size: 13px; margin-left: 6px; }
+  .step p, .mistake .txt p { margin: 5px 0 0; font-size: 14px; color: var(--muted); line-height: 1.55; }
+  .callout { display: flex; gap: 14px; margin-top: 26px; padding: 16px 18px; border-radius: 12px; background: #f6ecdc; border: 1px solid #ead7b8; color: #5a4526; font-size: 14.5px; }
+  .callout svg { flex: 0 0 22px; width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-top: 1px; }
+  .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .rule { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 20px 20px 22px; }
+  .rule i { display: block; font: 500 28px/1 var(--serif); font-style: normal; color: var(--gold); margin-bottom: 12px; }
+  .rule b { display: block; color: var(--ink); font-weight: 600; margin-bottom: 4px; }
+  .rule p { margin: 0; font-size: 14px; color: var(--muted); }
+  .tools { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tools span { font-size: 13.5px; padding: 7px 13px; border-radius: 99px; background: var(--paper); border: 1px solid var(--line); color: var(--ink); }
+  .mistakes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .mistake { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .mistake .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .mistake .step-ph { border-radius: 0; }
+  .mistake .bad { position: absolute; left: 10px; top: 10px; width: 28px; height: 28px; border-radius: 50%; background: #b4432f; color: #fff; display: grid; place-items: center; font-size: 14px; font-weight: 700; }
+  .mistake .txt { padding: 16px 18px 20px; }
+  .guide-next { display: flex; justify-content: flex-end; border-top: 1px solid var(--line); padding-top: 24px; }
+  #imgView { width: min(980px, calc(100vw - 48px)); overflow: hidden; }
+  #imgView figure { margin: 0; }
+  .iv-main { position: relative; background: #1b2731; }
+  .iv-main img { width: 100%; height: min(68vh, 620px); object-fit: contain; }
+  #imgView figcaption { padding: 16px 22px 20px; font-size: 14px; color: var(--muted); }
+  #imgView figcaption b { display: block; color: var(--ink); font-size: 16px; margin-bottom: 2px; }
+
   /* ---------- CTA + footer ---------- */
   .cta { padding: 0 0 104px; }
   .cta-box { position: relative; border-radius: 26px; overflow: hidden; color: #fff; padding: 80px 64px; background: var(--ink); }
@@ -302,18 +347,22 @@
 
   /* ---------- responsive ---------- */
   @media (max-width: 1080px) {
+    .facts { grid-template-columns: repeat(3, 1fr); }
     .series-row { grid-template-columns: repeat(7, 160px); overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x mandatory; }
     .series-tile { scroll-snap-align: start; }
     .adv-grid { grid-template-columns: repeat(2, 1fr); }
     .specs .wrap { grid-template-columns: 1fr; gap: 36px; }
   }
-  @media (max-width: 900px) {
-    section { padding: 76px 0; }
+  @media (max-width: 1040px) {
     .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--paper); border-bottom: 1px solid var(--line); padding: 8px 24px 16px; }
     .nav-links.open { display: flex; }
     .nav-links a { padding: 12px 0; border-bottom: 1px solid var(--line); }
     .menu-btn { display: inline-grid; margin-left: auto; }
     .menu-btn svg { width: 24px; height: 24px; stroke: var(--ink); stroke-width: 2; fill: none; }
+  }
+  @media (max-width: 900px) {
+    section { padding: 76px 0; }
+    #imgView { width: 100vw; max-width: 100vw; margin: auto 0; border-radius: 0; }
     .hero { padding-top: 28px; }
     .hero .wrap, .about .wrap { grid-template-columns: 1fr; gap: 44px; }
     .hero-card { left: 12px; bottom: 12px; width: 140px; }
@@ -352,6 +401,15 @@
     .apps-grid { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-rows: 240px; }
     .app:first-child, .app:last-child { grid-column: auto; }
     .real-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .facts { grid-template-columns: repeat(2, 1fr); }
+    .fact b { font-size: 26px; }
+    .guide-group h3 { font-size: 27px; }
+    .steps-grid { grid-template-columns: 1fr; gap: 20px; }
+    .step { display: grid; grid-template-columns: 128px 1fr; gap: 14px; align-items: start; }
+    .step figcaption { padding-top: 0; }
+    .step b .zh { display: block; margin: 2px 0 0; }
+    .mistakes { grid-template-columns: 1fr; }
+    .guide-next .btn { width: 100%; justify-content: center; }
     .td-info h2 { font-size: 36px; }
   }
 </style>
@@ -366,10 +424,11 @@
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#collection">Collection</a>
-      <a href="#about">What is soft stone</a>
+      <a href="#about">About</a>
       <a href="#applications">Applications</a>
       <a href="#real">Real photos</a>
       <a href="#specs">Specifications</a>
+      <a href="#installation">Installation</a>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <button class="sample-btn" id="sampleBtn" aria-label="Open sample list"><span class="label">Sample list</span><span class="count" id="sampleCount">0</span></button>
@@ -505,6 +564,7 @@
         <li><span>Thickness</span><span>2–8 mm, by texture</span></li>
         <li><span>Fire rating</span><span>Class A</span></li>
         <li><span>Use</span><span>Interior &amp; exterior walls</span></li>
+        <li><span>Fixing</span><span>Two-part A + B adhesive<br><a href="#installation" style="font-weight:500;color:var(--gold)">See installation guide</a></span></li>
         <li><span>Performance</span><span>Water, weather, UV &amp;<br>freeze-thaw resistant</span></li>
       </ul>
       <p class="note">Product photos, layouts and room images are for reference only. Actual colour and texture can vary between batches; please confirm with a physical sample before ordering.</p>
@@ -515,6 +575,21 @@
         <tbody id="specBody"></tbody>
       </table>
     </div>
+  </div>
+</section>
+
+<section id="installation">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Installation guide</p>
+        <h2>From crate to finished wall.</h2>
+      </div>
+      <p class="lead">How to handle, prepare and install soft stone, step by step. Written for designers, contractors and installers.</p>
+    </div>
+    <div class="facts reveal" id="facts"></div>
+    <div class="chips scroll guide-tabs" id="guideTabs" role="tablist" aria-label="Installation guide sections"></div>
+    <div id="guidePanels"></div>
   </div>
 </section>
 
@@ -571,6 +646,19 @@
   </div>
 </dialog>
 
+<!-- installation photo viewer -->
+<dialog id="imgView" aria-label="Installation photo">
+  <button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <figure>
+    <div class="iv-main">
+      <img id="ivImg" alt="">
+      <button class="lb-nav lb-prev" id="ivPrev" aria-label="Previous step"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="lb-nav lb-next" id="ivNext" aria-label="Next step"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <figcaption id="ivCap"></figcaption>
+  </figure>
+</dialog>
+
 <!-- sample list -->
 <div class="scrim" id="scrim"></div>
 <aside class="drawer" id="drawer" aria-label="Sample list" aria-hidden="true">
@@ -590,6 +678,7 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="assets/data.js"></script>
+<script src="assets/install.js"></script>
 <script>
 // Fill these in so the sample list can be sent straight to Soft Stone Sdn Bhd.
 // whatsapp: country code + number, digits only (e.g. "60123456789"); email: "sales@yourcompany.com.my"; website: "https://yourcompany.com.my"
@@ -853,6 +942,90 @@ $("#specBody").innerHTML = D.textures.map((t) => `
 $("#specBody").addEventListener("click", (e) => { const tr = e.target.closest("[data-slug]"); if (tr) openTexture(tr.dataset.slug); });
 $("#specBody").addEventListener("keydown", (e) => { if (e.key === "Enter") { const tr = e.target.closest("[data-slug]"); if (tr) openTexture(tr.dataset.slug); } });
 
+// ---------- installation guide ----------
+const G = window.INSTALL_GUIDE;
+const ALERT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l9.5 16.5h-19z"/><path d="M12 10v4.5M12 17.2v.1"/></svg>';
+const inst = (k) => `images/install/${k}.jpg`;
+const pad = (n) => String(n).padStart(2, "0");
+const viewSets = {};
+
+function stepCard([img, en, zh, text], i, key) {
+  return `<figure class="step">
+    <button class="step-ph" data-gview="${key}" data-i="${i}" aria-label="Enlarge step ${i + 1}: ${esc(en)}"><img src="${inst(img)}" alt="${esc(en)}" loading="lazy" decoding="async"><span class="step-no">${pad(i + 1)}</span></button>
+    <figcaption><b>${esc(en)}<span class="zh">${esc(zh)}</span></b><p>${esc(text)}</p></figcaption>
+  </figure>`;
+}
+function groupHTML(g, key) {
+  let body = "";
+  if (g.steps) {
+    viewSets[key] = g.steps.map(([img, en, zh, text], i) => ({ img: inst(img), title: `${pad(i + 1)} · ${en}`, zh, text }));
+    body = `<div class="steps-grid">${g.steps.map((s, i) => stepCard(s, i, key)).join("")}</div>`;
+  }
+  if (g.rules) {
+    body = `<div class="rules">${g.rules.map(([b, p], i) => `<div class="rule"><i>${pad(i + 1)}</i><b>${esc(b)}</b><p>${esc(p)}</p></div>`).join("")}</div>`;
+  }
+  if (g.mistakes) {
+    const set = (viewSets[key] = []);
+    body = `<div class="mistakes">${g.mistakes.map(([imgs, en, zh, text]) => `
+      <article class="mistake">
+        <div class="pair">${imgs.map((k) => {
+          set.push({ img: inst(k), title: `Don't: ${en}`, zh, text });
+          return `<button class="step-ph" data-gview="${key}" data-i="${set.length - 1}" aria-label="Enlarge: ${esc(en)}"><img src="${inst(k)}" alt="Incorrect: ${esc(en)}" loading="lazy" decoding="async"><span class="bad" aria-hidden="true">✕</span></button>`;
+        }).join("")}</div>
+        <div class="txt"><b>${esc(en)}<span class="zh">${esc(zh)}</span></b><p>${esc(text)}</p></div>
+      </article>`).join("")}</div>`;
+  }
+  return `<div class="guide-group">
+    <header><h3>${esc(g.en)}<span class="zh">${esc(g.zh)}</span></h3>${g.steps ? `<span class="count">${g.steps.length} steps</span>` : ""}</header>
+    ${g.intro ? `<p class="guide-intro">${esc(g.intro)}</p>` : ""}${body}
+    ${g.note ? `<div class="callout">${ALERT}<span>${esc(g.note)}</span></div>` : ""}
+  </div>`;
+}
+const toolsHTML = `<div class="guide-group"><header><h3>Tools you'll need<span class="zh">施工工具</span></h3></header><div class="tools">${G.tools.map((t) => `<span>${esc(t)}</span>`).join("")}</div></div>`;
+
+$("#facts").innerHTML = G.facts.map(([b, s]) => `<div class="fact"><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join("");
+$("#guideTabs").innerHTML = G.tabs.map((t, i) => `<button class="chip" role="tab" data-tab="${t.id}" aria-selected="${i === 0}" aria-pressed="${i === 0}">${pad(i + 1)} · ${esc(t.label)}</button>`).join("");
+$("#guidePanels").innerHTML = G.tabs.map((t, ti) => `
+  <div class="guide-panel" role="tabpanel" data-panel="${t.id}" ${ti ? "hidden" : ""}>
+    ${t.groups.map((g, gi) => groupHTML(g, `${t.id}-${gi}`)).join("")}
+    ${t.id === "prepare" ? toolsHTML : ""}
+    ${ti < G.tabs.length - 1 ? `<div class="guide-next"><button class="btn ghost" data-next="${G.tabs[ti + 1].id}">Next: ${esc(G.tabs[ti + 1].label)} →</button></div>` : ""}
+  </div>`).join("");
+
+function showGuideTab(id) {
+  $("#guideTabs").querySelectorAll("[data-tab]").forEach((c) => {
+    const on = c.dataset.tab === id;
+    c.setAttribute("aria-pressed", String(on));
+    c.setAttribute("aria-selected", String(on));
+  });
+  document.querySelectorAll("[data-panel]").forEach((p) => (p.hidden = p.dataset.panel !== id));
+}
+$("#guideTabs").addEventListener("click", (e) => { const b = e.target.closest("[data-tab]"); if (b) showGuideTab(b.dataset.tab); });
+
+const imgView = $("#imgView");
+let viewList = [], viewPos = 0;
+function renderView() {
+  const v = viewList[viewPos];
+  $("#ivImg").src = v.img;
+  $("#ivImg").alt = v.title;
+  $("#ivCap").innerHTML = `<b>${esc(v.title)} <span class="zh">${esc(v.zh)}</span></b>${esc(v.text)}`;
+  $("#ivPrev").hidden = $("#ivNext").hidden = viewList.length < 2;
+}
+function viewStep(d) { viewPos = (viewPos + d + viewList.length) % viewList.length; renderView(); }
+$("#guidePanels").addEventListener("click", (e) => {
+  const n = e.target.closest("[data-next]");
+  if (n) { showGuideTab(n.dataset.next); $("#guideTabs").scrollIntoView(); return; }
+  const b = e.target.closest("[data-gview]");
+  if (b) { viewList = viewSets[b.dataset.gview]; viewPos = Number(b.dataset.i); renderView(); imgView.showModal(); }
+});
+$("#ivPrev").addEventListener("click", () => viewStep(-1));
+$("#ivNext").addEventListener("click", () => viewStep(1));
+imgView.addEventListener("click", (e) => { if (e.target === imgView || e.target.closest("[data-close]")) imgView.close(); });
+imgView.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") viewStep(-1);
+  if (e.key === "ArrowRight") viewStep(1);
+});
+
 // ---------- sample list ----------
 const STORE = "softstone-samples";
 const key = (slug, i) => `${slug}|${i}`;
@@ -905,7 +1078,7 @@ const drawer = $("#drawer"), scrim = $("#scrim");
 function setDrawer(open) {
   drawer.classList.toggle("open", open); scrim.classList.toggle("open", open);
   drawer.setAttribute("aria-hidden", String(!open));
-  if (open) { if (texDialog.open) texDialog.close(); if (lightbox.open) lightbox.close(); $("#drawerClose").focus(); }
+  if (open) { [texDialog, lightbox, imgView].forEach((d) => d.open && d.close()); $("#drawerClose").focus(); }
 }
 $("#sampleBtn").addEventListener("click", () => setDrawer(true));
 $("#ctaSamples").addEventListener("click", () => setDrawer(true));
